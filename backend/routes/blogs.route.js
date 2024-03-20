@@ -14,14 +14,14 @@ router.get('/', async(req, res) => {
 // Endpoint for adding a single skill
 router.post('/', async(req, res) => {
     try {
-        let newBlogs = {
+        let newBlog = {
             title: req.body.title,
             summary: req.body.summary,
             content: req.body.content,
             body_image: req.body.body_image,
             cover_image: req.body.cover_image
         }
-        let result = await SKILLS_COLLECTION.insertOne(newBlogs);
+        let result = await SKILLS_COLLECTION.insertOne(newBlog);
         res.send(result).status(201);
     } catch (error) {
         console.error(error);

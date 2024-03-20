@@ -20,7 +20,7 @@ router.delete('/', async(req, res) => {
 // Endpoint for adding a single project
 router.post('/', async(req, res) => {
     try {
-        let newExperiences = {
+        let newExperience = {
             type: req.body.type,
             title: req.body.title,
             duration: req.body.duration,
@@ -28,7 +28,7 @@ router.post('/', async(req, res) => {
             organisation: req.body.organisation,
             location: req.body.location
         }
-        let result = await EXPERIENCES_COLLECTION.insertOne(newExperiences);
+        let result = await EXPERIENCES_COLLECTION.insertOne(newExperience);
         res.send(result).status(202);
     } catch (error) {
         console.error(error)
