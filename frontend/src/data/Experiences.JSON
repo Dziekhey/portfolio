@@ -1,4 +1,4 @@
-[
+const export experiences = [
     {
         "title": "National Service Personnel",
         "organisation": "Accra Brewery PLC",
