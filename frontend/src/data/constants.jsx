@@ -1,53 +1,76 @@
-
+import css from '../assets/tech/CSS3.png';
+import github from '../assets/tech/GitHub.png';
+import html from '../assets/tech/HTML5.png';
+import javascript from '../assets/tech/JavaScript.png';
+import jira from '../assets/tech/Jira.png';
+import material from '../assets/tech/Material UI.png';
+import node from '../assets/tech/Node.js.png'
+import react from '../assets/tech/React.png';
+import tailwind from '../assets/tech/Tailwind CSS.png';
+import vercel from '../assets/tech/Vercel.png';
+import vsc from '../assets/tech/Visual Studio Code (VS Code).png';
+import vite from '../assets/tech/Vite.js.png';
 
 const technologies = [
     {
         name: "CSS3",
-        image: "../assets/tech/CSS3.png"
+        src: css,
+        style: "shadow-blue-500"
     },
     {
         name: "HTML 5",
-        image: "../assets/tech/HTML5.png"
+        src: html,
+        style: "shadow-orange-500"
     },
     {
         name: "Javascript",
-        image: "../assets/tech/JavaScript.png"
+        src: javascript,
+        style: "shadow-yellow-500"
     },
     {
         name: "Tailwind CSS",
-        image: "../assets/tech/Tailwind CSS.png"
+        src: tailwind,
+        style: "shadow-sky-400"
     },
     {
         name: "Material UI",
-        image: "../assets/tech/Material UI.png"
-    },
-    {
-        name: "React.js",
-        image: "../assets/tech/React.png"
+        src: material,
+        style: "shadow-blue-600"
     },
     {
         name: "Node.js",
-        image: "../assets/tech/Node.js.png"
+        src: node,
+        style: "shadow-green-400"
+    },
+    {
+        name: "React.js",
+        src: react,
+        style: "shadow-sky-600"
     },
     {
         name: "Vite.js",
-        image: "../assets/tech/Vite.js.png"
+        src: vite,
+        style: "shadow-pink-400"
     },
     {
         name: "GitHub",
-        image: "../assets/tech/GitHub.png"
+        src: github,
+        style: "shadow-gray-400"
     },
     {
         name: "VS Code",
-        image: "../assets/tech/Visual Studio Code (VS Code).png.png"
-    },
-    {
-        name: "Jira",
-        image: "../assets/tech/Jira.png"
+        src: vsc,
+        style: "shadow-blue-500"
     },
     {
         name: "Vercel",
-        image: "../assets/tech/Vercel.png"
+        src: vercel,
+        style: "shadow-gray-300"
+    },
+    {
+        name: "Jira",
+        src: jira,
+        style: "shadow-sky-800"
     }
 ]
 

@@ -15,7 +15,7 @@ const Header = () => {
           <a href='#experience-section' className='no-underline text-inherit'><span className='px-4'>Experiences</span></a>
           <a href='' className='no-underline text-inherit'><span className='px-4'>Achievements</span></a>
           <a href='#project-section' className='no-underline text-inherit'><span className='px-4'>Projects</span></a>
-          <a href='' className='no-underline text-inherit'><span className='px-4'>Contact</span></a>
+          <a href='#contact-section' className='no-underline text-inherit'><span className='px-4'>Contact</span></a>
         </div>
       </header>
     </div>
