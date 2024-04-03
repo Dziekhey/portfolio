@@ -12,7 +12,9 @@ function App() {
 
   return (
     <>
+   <div className="w-full h-auto bg-bodyColor ">
      <Header />
+     <div className="">
      <Banner />
      <About />
      <Skills />
@@ -20,6 +22,8 @@ function App() {
      <Achievements />
      <Projects />
      <Contact />
+     </div>
+    </div>
     </>
   )
 }

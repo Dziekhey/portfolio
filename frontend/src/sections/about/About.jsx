@@ -4,11 +4,11 @@ import Sample from '../../assets/sample.jpg';
 const About = () => {
   return (
     <div id="about-section">
-    <div className="flex justify-center p-10">
+    <div className="flex justify-center p-10 ">
       <h1 className="text-white">About Me</h1>
     </div>
     <div className="flex justify-center p-10">
-      <div className="flex justify-center h-96 size-3/5 shadow-2xl z-40 bg-sky-500 shadow-blue-700 rounded-lg">
+      <div className="flex justify-center h-96 size-3/5 shadow-2xl z-30 bg-sky-500 shadow-blue-700 rounded-lg">
         <div className="w-1/3">
           <img src={Sample} alt="Picture"  className="h-full object-contain"/>
         </div>
