@@ -11,9 +11,9 @@ import ExperienceCard from "../../components/ExperienceCard.jsx";
 const Experiences = () => {
   return (
     <>
-    <div id='experience-section'>
+    <div id='experience' className="border-b-[1px] border-b-amber-200 pb-16">
        <motion.div>
-        <h1 className='text-white flex justify-center pt-10'>Work Experience</h1>
+        <h1 className='text-amber-200 text-4xl flex justify-center pt-20'>Experience</h1>
       </motion.div>
 
       <div className="mt-20 flex flex-col">

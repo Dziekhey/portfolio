@@ -10,7 +10,7 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="w-full h-24 sticky top-0 z-50 bg-black mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
+    <div className="w-full h-24 px-6 sticky top-0 z-50 bg-gray-900 mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-amber-200">
       <div>
         <img src={logo} alt="logo" className='size-48' /> {/* Updated logo source */}
       </div>
@@ -18,7 +18,7 @@ const Header = () => {
         <ul className="hidden md:inline-flex items-center gap-6 lg:gap-10"> {/* Fixed md class */}
           {navLinksdata.map(({ _id, title, link }) => (
             <li
-              className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
+              className="text-base font-normal text-amber-200 tracking-wide cursor-pointer hover:text-designColor duration-300"
               key={_id}
             >
               <Link

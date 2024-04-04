@@ -10,6 +10,10 @@ import tailwind from '../assets/tech/Tailwind CSS.png';
 import vercel from '../assets/tech/Vercel.png';
 import vsc from '../assets/tech/Visual Studio Code (VS Code).png';
 import vite from '../assets/tech/Vite.js.png';
+import todo from '../assets/todo.png';
+import recipe from '../assets/recipe.png';
+import movie from '../assets/movie.jpeg';
+import agro from '../assets/agrohub.png';
 
 
 const navLinksdata = [
@@ -20,23 +24,23 @@ const navLinksdata = [
     },
     {
       _id: 1002,
-      title: "Features",
-      link: "features",
+      title: "About",
+      link: "about",
     },
     {
       _id: 1003,
-      title: "Projects",
-      link: "projects",
+      title: "Skills",
+      link: "skills",
     },
     {
       _id: 1004,
-      title: "Resume",
-      link: "resume",
+      title: "Experience",
+      link: "experience",
     },
     {
       _id: 1005,
-      title: "Testimonial",
-      link: "testimonial",
+      title: "Projects",
+      link: "projects",
     },
     {
       _id: 1006,
@@ -111,6 +115,18 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Web Developer",
+    organisation: "MEST Africa",
+    location: "East Legon, Accra",
+    subtitle: "Trainee",
+    points: [
+      "Participated in code-along sessions with instructors to build a website using HTML and CSS.",
+      "Engaged in code-along sessions to develop a Todo app with React.",
+      "Collaborated in a team of 4 to build an agro product marketplace website using React.",
+    ],
+    date: "02-2024 - present",
+  },
+  {
     title: "National Service Personnel",
     organisation: "Accra Brewery PLC",
     location: "Graphic road, Accra",
@@ -138,46 +154,34 @@ const experiences = [
       "Updating of cellars daily performance",
     ],
     date: "Nov-2022 - Oct-2023",
-  },
-  {
-    title: "Web Developer",
-    organisation: "MEST Africa",
-    location: "East Legon, Accra",
-    subtitle: "Trainee",
-    points: [
-      "Participated in code-along sessions with instructors to build a website using HTML and CSS.",
-      "Engaged in code-along sessions to develop a Todo app with React.",
-      "Collaborated in a team of 4 to build an agro product marketplace website using React.",
-    ],
-    date: "02-2024 - present",
-  },
+  }
 ];
 
 
 const projects = [
     {
         title: "TODO APP",
-        description: "A web-based todo platform for saving tasks with database storage, facilitating efficient task management and organization for users.",
+        description: "A web-based todo platform for saving, deleting and updating tasks with database storage, facilitating efficient task management and organization for users.",
         github: "https://github.com/Dziekhey/Todo-app",
-        website: ""
+        image: todo
     },
     {
         title: "RECIPE APP",
         description: "Web-based recipe platform enables users to browse recipes, stored in a database, with admin capability to add new recipes. Efficient culinary exploration.",
         github: "https://github.com/Dziekhey/recipe-app",
-        website: ""
+        image: recipe
     },
     {
         title: "E-COMMERCE WEBSITE",
         description: "An agromarketplace where users can explore products, add to cart, and checkout. Simplifying agricultural shopping with seamless online transactions.",
-        github: "https://github.com/Dziekhey/recipe-app",
-        website: ""
+        github: "https://github.com/CodeSphereMest/MarketAgroProduct-App",
+        image: agro
     },
     {
         title: "MOVIE WEBSITE",
         description: "Cinemate: Browse movies, search titles. Enhancing movie discovery and user experience with intuitive navigation and comprehensive search functionality",
         github: "https://github.com/mrkabby/CineMate",
-        website: ""
+        image: movie
     }
 ]
 

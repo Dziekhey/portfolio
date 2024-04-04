@@ -5,10 +5,10 @@ import {projects} from '../../data/constants';
 const Projects = () => {
   return (
     <>
-    <div id='project-section'>
-        <div className='flex justify-center p-10'><h1 className='text-white'>Projects</h1></div>
-        <div className='flex justify-center py-12 mb-12'>
-        <div className='grid grid-cols-3 gap-14'>
+    <div id='projects' className='border-b-[1px] border-b-amber-200 pt-6'>
+        <div className='flex justify-center p-10'><h1 className='text-amber-200 text-4xl'>Projects</h1></div>
+        <div className='flex justify-center py-10 mb-12'>
+        <div className='grid grid-cols-4 gap-9'>
           {
             projects.map((project, index) => (<ProjectCard key= {index} project={project}/>))
           }

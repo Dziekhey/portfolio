@@ -1,4 +1,4 @@
-const export experiences = [
+[
     {
         "title": "National Service Personnel",
         "organisation": "Accra Brewery PLC",
@@ -7,7 +7,7 @@ const export experiences = [
         "description": "",
         "start_date": "11-2022",
         "end_date": "08-2023"
-    }
+    },
     {
         "title": "National Service Personnel",
         "organisation": "Accra Brewery PLC",
@@ -16,9 +16,9 @@ const export experiences = [
         "description": "",
         "start_date": "11-2022",
         "end_date": "08-2023"
-    }
+    },
     {
-        "title": "Web Developerk",
+        "title": "Web Developer",
         "organisation": "MEST Africa",
         "location": "East Legon, Accra",
         "subtitle": "Trainee",

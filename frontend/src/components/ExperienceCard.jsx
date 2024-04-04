@@ -7,23 +7,24 @@ const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
+        background: "#303a4b",
+        color: "#ffff",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-      date={experience.date}  
+      contentArrowStyle={{ borderRight: "7px solid  #FFC94A" }}
+      date={experience.date} 
+      
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+        <h3 className="text-amber-200 text-[24px] font-bold">{experience.title}</h3>
         <div className="flex justify-between">
-          <h3 className="text-[#da38ca] text-[20px] pt-4 font-semibold">
+          <h3 className="text-white text-[20px] pt-4 font-semibold">
             {experience.organisation}
           </h3>
-          <h5 className="text-[#da38ca] text-[20px] pt-4 font-semibold">
+          <h5 className="text-white text-[20px] pt-4 font-semibold">
             {experience.location}
           </h5>
         </div>
-        <p className="text-rose-400">{experience.subtitle}</p>
+        <p className="text-[#1f1a1a]">{experience.subtitle}</p>
       </div>
 
       <ul className="mt-5 list-disc ml-5 space-y-2">

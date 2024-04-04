@@ -45,18 +45,18 @@ const Contact = () => {
     }
   };
   return (
-    <div id="contact-section">
-      <div className=" bg-zinc-800">
+    <div id="contact">
+      <div className="   bg-gradient-to-r from-gray-900 to-gray-700">
         <div className="flex justify-center">
-          <h1 className="text-white py-10">Contact Me</h1>
+          <h1 className="text-amber-200 text-4xl py-10">Contact Me</h1>
         </div>
 
-        <div className="h-auto p-12 flex gap-28 justify-between">
-          <div className="w-[35%] flex flex-col ">
+        <div className="h-auto p-12 flex gap-14 justify-between">
+          <div className="w-[37%] flex flex-col ">
             <LeftContact />
           </div>
 
-          <div className="w-[60%] p-10 shadow-2xl shadow-black bg-zinc-800">
+          <div className="w-[60%] p-10 shadow-2xl shadow-black bg-gray-900">
           <form className="py-2">
           {errMsg && (
                 <p className="bg-black py-2 shadow-2xl text-center text-orange-500 text-base tracking-wide animate-bounce">
