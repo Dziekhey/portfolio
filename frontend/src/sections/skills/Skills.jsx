@@ -14,6 +14,7 @@ const Skills = () => {
         technologies.map((technology, index) => (<SkillCard key ={index} technology ={technology}/>))
        }
     </div>
+      
     </div>
     </div>
     </>

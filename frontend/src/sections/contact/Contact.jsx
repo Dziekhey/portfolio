@@ -1,5 +1,6 @@
 import { useState } from "react";
 import LeftContact from "../../components/LeftContact";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [username, setUsername] = useState("");
@@ -9,16 +10,19 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
-
+  // const [isSubmitting, setIsSubmitting] = useState(false);
   // ========== Email Validation start here ==============
   const emailValidation = () => {
     return String(email)
       .toLocaleLowerCase()
-      .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
+      .match(/^\w+([-]?\w+)@\w+([-]?\w+)(\.\w{2,3})+$/);
   };
   // ========== Email Validation end here ================
 
+  // const sendEmail = (e) => {
+
   const handleSend = (e) => {
+    e.persist();
     e.preventDefault();
     if (username === "") {
       setErrMsg("Username is required!");
@@ -33,9 +37,36 @@ const Contact = () => {
     } else if (message === "") {
       setErrMsg("Message is required!");
     } else {
-      setSuccessMsg(
-        `Thank you dear ${username}, Your Messages has been sent Successfully!`
+    emailjs
+      .sendForm(
+        process.env.VITE_APP_SERVICE_ID,
+        process.env.VITE_APP_TEMPLATE_ID,
+        e.target,
+        process.env.VITE_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          // setStateMessage('Message sent!');
+          setSuccessMsg(
+            `Thank you dear ${username}, Your Messages has been sent Successfully!`
+          );
+          // setIsSubmitting(false);
+          setTimeout(() => {
+            setSuccessMsg(null);
+          }, 5000); // hide message after 5 seconds
+        },
+        (error) => {
+          setSuccessMsg('Something went wrong, please try again later');
+          setTimeout(() => {
+            setSuccessMsg(null);
+          }, 5000); // hide message after 5 seconds
+        }
       );
+    
+    // Clears the form after sending the email
+    e.target.reset();
+
+      
       setErrMsg("");
       setUsername("");
       setPhoneNumber("");
@@ -75,6 +106,7 @@ const Contact = () => {
                     type="text"
                     onChange={(e) => setUsername(e.target.value)}
                     value={username}
+                    name="username"
                     className={`${
                       errMsg === "Username is required!" &&
                       "outline-border-blue-800"
@@ -88,6 +120,7 @@ const Contact = () => {
                     type="text"
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     value={phoneNumber}
+                    name="phonenumber"
                     className={`${
                       errMsg === "Phone number is required!" &&
                       "outline-designColor"
@@ -102,6 +135,7 @@ const Contact = () => {
                   type="text"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
+                  name="email"
                   className={`${
                     errMsg === "Please give your Email!" &&
                     "outline-designColor"
@@ -115,6 +149,7 @@ const Contact = () => {
                   type="text"
                   onChange={(e) => setSubject(e.target.value)}
                   value={subject}
+                  name="subject"
                   className={`${
                     errMsg === "Plese give your Subject!" &&
                     "outline-designColor"
@@ -128,6 +163,7 @@ const Contact = () => {
                   rows="8"
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
+                  name="message"
                   className={`${
                     errMsg === "Message is required!" && "outline-designColor"
                   } contactTextArea w-full py-3 px-2 rounded-lg bg-black text-[16px] text-white focus:outline focus:ring focus:border-blue-800`}

@@ -9,6 +9,7 @@ const SkillCard = ({technology}) => {
         <img src={technology.src} className='object-contain w-full h-[85%] overflow-hidden '/>
     <h3 className='text-white text-center'>{technology.name}</h3>
     </div>
+   
   )
 }
 

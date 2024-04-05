@@ -24,7 +24,7 @@ const ExperienceCard = ({ experience }) => {
             {experience.location}
           </h5>
         </div>
-        <p className="text-[#1f1a1a]">{experience.subtitle}</p>
+        <p className="text-amber-200">{experience.subtitle}</p>
       </div>
 
       <ul className="mt-5 list-disc ml-5 space-y-2">

@@ -13,7 +13,7 @@ const LeftContact = () => {
       />
       <div className="flex flex-col gap-8">
         <h3 className="text-3xl font-bold pt-3 text-amber-200">Sandra Mawuwenam Dakey</h3>
-        <h5 className="text-lg text-black font-bold">
+        <h5 className="text-2xl text-black font-bold">
         Web Developer
         </h5>
         <p className="text-base text-white tracking-wide">

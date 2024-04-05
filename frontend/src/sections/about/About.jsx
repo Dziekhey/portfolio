@@ -1,5 +1,5 @@
 import React from "react";
-import Sample from '../../assets/sample.jpg';
+import Sample from '../../assets/Sandypic.jpg';
 
 const About = () => {
   return (
@@ -8,11 +8,11 @@ const About = () => {
       <h1 className="text-amber-200 text-4xl">About Me</h1>
     </div>
     <div className="flex justify-center p-10">
-      <div className="flex justify-center h-auto size-3/5 shadow-lg z-30 bg-gray-900 shadow-amber-100 rounded-lg">
+      <div className="flex justify-center h-auto w-4/5 shadow-md z-30 bg-gray-900 shadow-blue-300 rounded-lg">
         <div className="w-1/3">
-          <img src={Sample} alt="Picture"  className="h-full object-contain"/>
+          <img src={Sample} alt="Picture"  className="h-full w-full overflow-hidden"/>
         </div>
-        <div className="w-2/3 p-4">
+        <div className="w-3/4 p-4">
           <p className="text-white pt-4 pb-12">
             Hello! I'm Sandra Dakey, a Nutrition and Food Science graduate from
             the University of Ghana, Legon, currently diving into web
