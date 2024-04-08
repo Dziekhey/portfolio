@@ -93,8 +93,8 @@ const Contact = () => {
                 </p>
               )}
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                <div>
-                  <h4 className="pb-2 text-white">FULL NAME</h4>
+                <div className="lg:pb-8">
+                  <h4 className="pb-4 text-white">FULL NAME</h4>
                   <input
                     type="text"
                     onChange={(e) => setUsername(e.target.value)}
@@ -107,7 +107,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="pb-2 text-white">PHONE NUMBER</h4>
+                  <h4 className="pb-4 text-white">PHONE NUMBER</h4>
                   <input
                     type="text"
                     onChange={(e) => setPhoneNumber(e.target.value)}
@@ -120,8 +120,8 @@ const Contact = () => {
                   />
                 </div>
               </div>
-              <div>
-                <h4 className="pb-2 text-white">EMAIL</h4>
+              <div className="lg:pb-8">
+                <h4 className="pb-4 text-white">EMAIL</h4>
                 <input
                   type="text"
                   onChange={(e) => setEmail(e.target.value)}
@@ -133,8 +133,8 @@ const Contact = () => {
                   } contactInput w-full py-3 px-2 rounded-lg bg-black text-[16px] text-white focus:outline focus:ring focus:border-blue-800`}
                 />
               </div>
-              <div>
-                <h4 className="pb-2 text-white">SUBJECT</h4>
+              <div className="lg:pb-8">
+                <h4 className="pb-4 text-white">SUBJECT</h4>
                 <input
                   type="text"
                   onChange={(e) => setSubject(e.target.value)}
@@ -146,8 +146,8 @@ const Contact = () => {
                   } contactInput w-full py-3 px-2 rounded-lg bg-black text-[16px] text-white focus:outline focus:ring focus:border-blue-800`}
                 />
               </div>
-              <div>
-                <h4 className="pb-2 text-white">MESSAGE</h4>
+              <div className="lg:pb-8">
+                <h4 className="pb-4 text-white">MESSAGE</h4>
                 <textarea
                   rows="8"
                   onChange={(e) => setMessage(e.target.value)}
@@ -166,6 +166,16 @@ const Contact = () => {
                   <h4 className="p-3 text-white">SUBMIT</h4>
                 </button>
               </div>
+              {errMsg && (
+                <p className="bg-black py-2 mt-4 text-center text-orange-500 text-base tracking-wide animate-bounce">
+                  {errMsg}
+                </p>
+              )}
+              {successMsg && (
+                <p className="bg-black py-2 mt-4 text-center text-green-500 text-base tracking-wide animate-bounce">
+                  {successMsg}
+                </p>
+              )}
             </form>
           </div>
         </div>

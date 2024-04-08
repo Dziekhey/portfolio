@@ -4,7 +4,7 @@ import React from 'react'
 const ProjectCard = ({project}) => {
   return (
     <div>
-       <div className="w-72 h-96  bg-gray-700 shadow-2xl shadow-black xl:px-4  xl:py-8 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000">
+       <div className="w-64 h-96 md:px-4 bg-gray-700 shadow-2xl shadow-black xl:px-4  xl:py-8 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000">
       <div className="w-full h-[80%] overflow-hidden rounded-lg">
         <img
           className="w-full h-50 object-contain group-hover:scale-110 duration-300 cursor-pointer"
