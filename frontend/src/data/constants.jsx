@@ -154,7 +154,18 @@ const experiences = [
       "Updating of cellars daily performance",
     ],
     date: "Nov-2022 - Oct-2023",
-  }
+  },
+  {
+    title: "Junior Web Developer",
+    organisation: "Corextreme Technologies",
+    location: "Cameroon",
+    subtitle: "Intern",
+    points: [
+      "Created backend database for padi application",
+      "Collaborated with front-end developers to integrate user-facing elements with server-side logic"
+    ],
+    date: "April-2024 - present",
+  },
 ];
 
 
