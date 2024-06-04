@@ -67,6 +67,7 @@ const Contact = () => {
             }, 5000);
           },
           (error) => {
+            console.log(error)
             setSuccessMsg("Something went wrong, please try again later");
             setTimeout(() => {
               setSuccessMsg(null);
