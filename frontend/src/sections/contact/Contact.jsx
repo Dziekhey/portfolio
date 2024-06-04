@@ -4,41 +4,58 @@ import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [username, setUsername] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
 
-  const emailValidation = () => {
-    return String(email)
-      .toLocaleLowerCase()
-      .match(/^\w+([-]?\w+)@\w+([-]?\w+)(\.\w{2,3})+$/);
-  };
-
   const handleSend = (e) => {
-    e.persist();
     e.preventDefault();
+    // Create a new object that contains dynamic template params
+    const templateParams = {
+      username: username,
+      email: email,
+      phonenumber: phonenumber,
+      to_name: "Sandra Mawuwenam Dakey",
+      subject: subject,
+      message: message,
+    };
+
+    // Send the email using Emailjs
     if (username === "") {
-      setErrMsg("Username is required!");
-    } else if (phoneNumber === "") {
+      setErrMsg("Full name is required!");
+      setTimeout(() => {
+        setErrMsg(null);
+      }, 2000);
+    } else if (phonenumber === "") {
       setErrMsg("Phone number is required!");
+      setTimeout(() => {
+        setErrMsg(null);
+      }, 2000);
     } else if (email === "") {
       setErrMsg("Please give your Email!");
-    } else if (!emailValidation(email)) {
-      setErrMsg("Give a valid Email!");
+      setTimeout(() => {
+        setErrMsg(null);
+      }, 2000);
     } else if (subject === "") {
       setErrMsg("Please give your Subject!");
+      setTimeout(() => {
+        setErrMsg(null);
+      }, 2000);
     } else if (message === "") {
       setErrMsg("Message is required!");
+      setTimeout(() => {
+        setErrMsg(null);
+      }, 2000);
     } else {
       emailjs
-        .sendForm(
-          process.env.VITE_APP_SERVICE_ID,
-          process.env.VITE_APP_TEMPLATE_ID,
-          e.target,
-          process.env.VITE_APP_PUBLIC_KEY
+        .send(
+          import.meta.env.VITE_APP_SERVICE_ID,
+          import.meta.env.VITE_APP_TEMPLATE_ID,
+          templateParams,
+          import.meta.env.VITE_APP_PUBLIC_KEY
         )
         .then(
           (result) => {
@@ -56,12 +73,11 @@ const Contact = () => {
             }, 5000);
           }
         );
-
       e.target.reset();
 
       setErrMsg("");
       setUsername("");
-      setPhoneNumber("");
+      setPhonenumber("");
       setEmail("");
       setSubject("");
       setMessage("");
@@ -81,7 +97,7 @@ const Contact = () => {
           </div>
 
           <div className="w-full md:w-[60%] p-6 md:p-10 shadow-2xl shadow-black bg-gray-900">
-            <form>
+            <form onSubmit={handleSend}>
               {errMsg && (
                 <p className="bg-black py-2 text-center text-orange-500 text-base tracking-wide animate-bounce">
                   {errMsg}
@@ -109,9 +125,9 @@ const Contact = () => {
                 <div>
                   <h4 className="pb-4 text-white">PHONE NUMBER</h4>
                   <input
-                    type="text"
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                    value={phoneNumber}
+                    type="tel"
+                    onChange={(e) => setPhonenumber(e.target.value)}
+                    value={phonenumber}
                     name="phonenumber"
                     className={`${
                       errMsg === "Phone number is required!" &&
@@ -123,7 +139,7 @@ const Contact = () => {
               <div className="lg:pb-8">
                 <h4 className="pb-4 text-white">EMAIL</h4>
                 <input
-                  type="text"
+                  type="email"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
                   name="email"
@@ -160,7 +176,7 @@ const Contact = () => {
               </div>
               <div>
                 <button
-                  onClick={handleSend}
+                  type="submit"
                   className="bg-black w-full rounded-lg hover:cursor-pointer"
                 >
                   <h4 className="p-3 text-white">SUBMIT</h4>

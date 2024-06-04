@@ -12,7 +12,7 @@ const About = () => {
           <div className="md:w-1/3">
             <img src={Sample} alt="Picture" className="h-auto w-full md:h-full md:w-auto object-cover" />
           </div>
-          <div className="w-full md:w-2/3 p-4">
+          <div className="w-full md:w-2/3 py-6 px-7 space-y-12">
             <p className="text-white pt-4 pb-6">
               Hello! I'm Sandra Dakey, a Nutrition and Food Science graduate from
               the University of Ghana, Legon, currently diving into web
